@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SnapToStop - Sign Up</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #B5EAD7, #CDB4DB);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  h2 {
+    text-align: center;
+    color: #4A4A4A;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFFACD;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #A0E7E5;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Username" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Confirm Password" required />
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>

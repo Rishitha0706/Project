@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SnapToStop - Login</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #A0E7E5, #FFD1BA);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  h2 {
+    text-align: center;
+    color: #4A4A4A;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFFACD;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #CDB4DB;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+  .toggle {
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h2 id="form-title">Login</h2>
+    <form id="auth-form">
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <div id="extra-fields" style="display: none;">
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Confirm Password" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div class="toggle" onclick="toggleForm()">Don't have an account? Sign Up</div>
+  </div>
+
+<script>
+  let isSignup = false;
+  function toggleForm() {
+    const title = document.getElementById('form-title');
+    const extra = document.getElementById('extra-fields');
+    const toggle = document.querySelector('.toggle');
+    isSignup = !isSignup;
+    if (isSignup) {
+      title.innerText = 'Sign Up';
+      extra.style.display = 'block';
+      toggle.innerText = 'Already have an account? Login';
+    } else {
+      title.innerText = 'Login';
+      extra.style.display = 'none';
+      toggle.innerText = "Don't have an account? Sign Up";
+    }
+  }
+</script>
+</body>
+</html>
