@@ -1,62 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SnapToStop - Landing</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #FFD1BA, #B5EAD7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  .container {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.7);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  }
-  h1 {
-    font-size: 2.5rem;
-    color: #4A4A4A;
-  }
-  p {
-    color: #6B6B6B;
-    margin-bottom: 2rem;
-  }
-  .btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    margin: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .login {
-    background-color: #CDB4DB;
-    color: #fff;
-  }
-  .signup {
-    background-color: #A0E7E5;
-    color: #333;
-  }
-  .btn:hover {
-    opacity: 0.8;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProofReminder</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>SnapToStop</h1>
-    <p>The alarm that stops only when you snap a photo. Stay awake, stay productive!</p>
-    <button class="btn login" onclick="window.location.href='login.html'">Login</button>
-    <button class="btn signup" onclick="window.location.href='signup.html'">Sign Up</button>
-  </div>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1 class="logo">ProofReminder</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="btn primary">Get Started</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>
+        Reminders That Don’t <span class="highlight">Let You Cheat</span>
+      </h2>
+      <p>
+        Stay on top of your goals by proving you did them. Upload a quick
+        photo to complete your reminders—no more skipping your meds,
+        workouts, or tasks.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn primary">Start Free</button>
+        <button class="btn secondary">Learn More</button>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://illustrations.popsy.co/gray/reminders.svg" alt="Reminder Illustration" />
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <h3>Features</h3>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon">🔔</div>
+        <h4>Smart Reminders</h4>
+        <p>Never forget again with persistent reminders that stay until you finish the task.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📤</div>
+        <h4>Photo Proof</h4>
+        <p>Upload a photo to confirm completion—no excuses, just proof.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">✅</div>
+        <h4>Track Progress</h4>
+        <p>View your history and build streaks as you stick to your commitments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <p>© <span id="year"></span> ProofReminder.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
